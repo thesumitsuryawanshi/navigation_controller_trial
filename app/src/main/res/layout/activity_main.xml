@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/cardview_dark_background">
+    android:background="@color/cardview_dark_background"
+    tools:context=".MainActivity">
 
 
     <androidx.fragment.app.FragmentContainerView
@@ -14,8 +14,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:layout_marginTop="50dp"
         android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="50dp"
 
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,10 +28,20 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="main_activity"
         android:textColor="@color/white"
-        android:text="this is main_activity with bg black  "
         app:layout_constraintBottom_toTopOf="@+id/fragmentContainerView1"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_temp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_temp"
+        android:layout_width="102dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:text="temp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

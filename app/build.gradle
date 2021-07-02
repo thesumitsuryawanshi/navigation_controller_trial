@@ -30,6 +30,16 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    //adding here new dependency (we can say) cause we are using view binding to bind the  UI element with the .kt file to use .
+    //view binding is newest option and efficient one for the binding of ui elements.
+    // below ius the code
+
+    buildFeatures
+            {
+                viewBinding true
+            }
+
 }
 
 dependencies {
