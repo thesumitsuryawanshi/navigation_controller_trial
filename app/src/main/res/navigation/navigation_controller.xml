@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_controller"
+    app:startDestination="@id/main">
+
+    <fragment
+        android:id="@+id/main"
+        android:name="com.example.navigation_controller_trial.main"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_main_to_a"
+            app:destination="@id/a" />
+        <action
+            android:id="@+id/action_main_to_c"
+            app:destination="@id/c" />
+        <action
+            android:id="@+id/action_main_to_b"
+            app:destination="@id/b" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/a"
+        android:name="com.example.navigation_controller_trial.A"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/b"
+        android:name="com.example.navigation_controller_trial.B"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/action_b_to_fragment_b_1"
+            app:destination="@id/fragment_b_1" />
+    </fragment>
+    <fragment
+        android:id="@+id/c"
+        android:name="com.example.navigation_controller_trial.C"
+        android:label="fragment_c"
+        tools:layout="@layout/fragment_c" />
+    <fragment
+        android:id="@+id/fragment_b_1"
+        android:name="com.example.navigation_controller_trial.fragment_b_1"
+        android:label="fragment_b_1"
+        tools:layout="@layout/fragment_b_1" />
+
+</navigation>

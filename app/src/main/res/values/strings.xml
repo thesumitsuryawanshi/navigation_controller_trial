@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">navigation_controller_trial</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="hello_blank_fragment_1">Hello blank fragment 1</string>
+    <string name="hello_blank_fragment_2">Hello blank fragment 2</string>
+    <string name="hello_blank_fragment_3">Hello blank fragment 3</string>
+    <string name="hello_blank_fragment_main">Hello blank fragment main</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
