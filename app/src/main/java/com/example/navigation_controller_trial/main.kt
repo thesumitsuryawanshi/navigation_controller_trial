@@ -16,12 +16,12 @@ import androidx.navigation.Navigation
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
+
 /**
  * A simple [Fragment] subclass.
  * Use the [main.newInstance] factory method to
  * create an instance of this fragment.
  */
-
 
 class main : Fragment() , View.OnClickListener{
 
@@ -46,17 +46,19 @@ class main : Fragment() , View.OnClickListener{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-            //now this fragment_main is used in our navigation graph .
-        //so here below  after passing view parameter to the below code  it'll (android) automatically connect the our Navigation_graph and this nav controller
-    //means below navController have reference to the navigation_graph
+        //now this fragment_main is used in our navigation graph .
+        //so here below  after passing view parameter to the below code
+        // it'll (android) automatically connect the our Navigation_graph and this nav controller obj
+        //means below navController have reference to the navigation_graph cause this .kt file have a
+        // relationship with fragment_main file whichc is used in navigation_controller file i.e in graph
+        // this graph is now aautomatically gets connected with the below navcontroller obj
 
             navController =Navigation.findNavController(view)
 
-            view.findViewById<Button>(R.id.btn_fragment_a).setOnClickListener(this)
-            view.findViewById<Button>(R.id.btn_fragment_b).setOnClickListener(this)
-            view.findViewById<Button>(R.id.btn_fragment_c).setOnClickListener(this)
 
-
+        view.findViewById<Button>(R.id.btn_fragment_a).setOnClickListener(this)
+        view.findViewById<Button>(R.id.btn_fragment_b).setOnClickListener(this)
+        view.findViewById<Button>(R.id.btn_fragment_c).setOnClickListener(this)
 
 
 

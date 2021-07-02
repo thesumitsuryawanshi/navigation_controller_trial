@@ -23,8 +23,6 @@ class B : Fragment() , View.OnClickListener{
         }
     }
 
-
-
 //--------------------------------------------------------------------------------------------------------------------
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -61,6 +59,7 @@ class B : Fragment() , View.OnClickListener{
         }
 
     }
+//--------------------------------------------------------------------------------------------------------------------
 
 
 }

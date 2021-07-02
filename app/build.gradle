@@ -41,7 +41,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
-    //below 2 are the new dependencies that are added for creating the navigation overview graph
+    //below 2 are the new dependencies that are added for creating the navigation graph
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
 
