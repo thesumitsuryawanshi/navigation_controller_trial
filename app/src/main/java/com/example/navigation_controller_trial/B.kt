@@ -5,15 +5,24 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.Toast
+
+//below req for navigation graph and navigation controller
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 
+//for view binding
+import com.example.navigation_controller_trial.databinding.FragmentBBinding
 
-class B : Fragment() , View.OnClickListener{
+
+class B : Fragment() {
 
 
     private lateinit var  navController:NavController
+
+    private lateinit var binding: FragmentBBinding
+
+
 
 
 //--------------------------------------------------------------------------------------------------------------------
@@ -31,11 +40,12 @@ class B : Fragment() , View.OnClickListener{
 
     {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_b, container, false)
 
+        binding= FragmentBBinding.inflate(layoutInflater)
+        return binding.root
     }
 
-//--------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -44,22 +54,13 @@ class B : Fragment() , View.OnClickListener{
         //never forget to bind the navcontroller obj with the view
         navController = Navigation.findNavController(view)
 
-        //now after clicking this button will  will send user from fragment b to fragment b-1
-            view.findViewById<Button>(R.id.btn_fragment_b_1).setOnClickListener(this)
-
-    }
-
-//--------------------------------------------------------------------------------------------------------------------
-
-    override fun onClick(v: View?) {
-
-        when(v!!.id)
+        binding.B1.setOnClickListener()
         {
-                R.id.btn_fragment_b_1 -> navController.navigate(R.id.action_b_to_fragment_b_1)
+            Toast.makeText(context, "heading towards the fragment B_1", Toast.LENGTH_SHORT).show()
+            navController.navigate(R.id.action_b_to_fragment_b_1)
         }
 
-    }
-//--------------------------------------------------------------------------------------------------------------------
 
+    }
 
 }
